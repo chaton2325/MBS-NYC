@@ -8,9 +8,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
-              MBS NYC
-            </h3>
+            <div className="flex items-center gap-3 mb-4">
+              <img src="/MBS.jpg" alt="MBS NYC Logo" className="h-14 w-auto rounded-sm" />
+              <h3 className="text-2xl font-bold" style={{ fontFamily: 'Playfair Display, serif' }}>MBS NYC</h3>
+            </div>
             <p className="text-slate-400 leading-relaxed mb-4">
               Mekinda Business Solutions LLC - Empowering businesses through strategic consulting and innovative digital solutions.
             </p>

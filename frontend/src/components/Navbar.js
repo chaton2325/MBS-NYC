@@ -37,7 +37,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" data-testid="nav-logo-link">
+          <Link to="/" data-testid="nav-logo-link" className="flex items-center gap-3">
+            <img src="/MBS.jpg" alt="MBS NYC Logo" className="h-14 w-auto rounded-sm" />
             <motion.div
               whileHover={{ scale: 1.02 }}
               className="flex flex-col"

@@ -23,19 +23,19 @@ const Home = () => {
 
   const products = [
     {
-      name: 'Scan 2 Find App',
+      name: 'Scan2Find App',
       description: 'Revolutionary QR-based discovery platform',
-      link: '#'
+      link: 'https://scan2find.info'
     },
     {
-      name: 'No 2 Fine App',
+      name: 'No2Fine App',
       description: 'Innovative community engagement solution',
-      link: '#'
+      link: 'https://no2fine.app'
     },
     {
       name: 'ADL Printing',
       description: 'Professional custom printing services',
-      link: '#'
+      link: 'https://adlprinting.com'
     },
     {
       name: 'UNews23 Media',

@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Scan, AlertCircle, Printer as PrinterIcon, Radio } from 'lucide-react';
+import { ExternalLink, Radio } from 'lucide-react';
 
 const Products = () => {
   const products = [
     {
-      icon: <Scan size={48} strokeWidth={1.5} />,
+      icon: <img src="/scan2find.jpg" alt="Scan2Find App" className="h-56 w-auto object-contain rounded-lg shadow-sm" />,
       name: 'Scan2Find App',
       description: 'A revolutionary QR-based discovery platform that connects users with businesses, events, and information seamlessly. Scan 2 Find transforms physical spaces into interactive digital experiences.',
       features: [
@@ -16,7 +16,7 @@ const Products = () => {
       link: 'https://scan2find.info'
     },
     {
-      icon: <AlertCircle size={48} strokeWidth={1.5} />,
+      icon: <img src="/no2fine.jpg" alt="No2Fine App" className="h-64 w-auto object-contain rounded-2xl shadow-sm" />,
       name: 'No2Fine App',
       description: 'An innovative community engagement solution designed to improve civic participation and streamline communication between organizations and their communities.',
       features: [
@@ -28,7 +28,7 @@ const Products = () => {
       link: 'https://no2fine.app'
     },
     {
-      icon: <PrinterIcon size={48} strokeWidth={1.5} />,
+      icon: <img src="/ADL-removebg.png" alt="ADL Printing" className="h-48 w-auto object-contain" />,
       name: 'ADL Printing',
       description: 'Professional custom printing services offering high-quality production for all your business needs, from marketing materials to branded merchandise.',
       features: [
