@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone, Send } from 'lucide-react';
 import { toast } from 'sonner';
+import { Helmet } from 'react-helmet-async';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -41,6 +42,13 @@ const Contact = () => {
 
   return (
     <div data-testid="contact-page" className="pt-20">
+      <Helmet>
+        <title>Contact | MBS NYC</title>
+        <meta property="og:title" content="Contact Us | MBS NYC - Let's Start a Conversation" />
+        <meta property="og:description" content="Ready to transform your business? Reach out to MBS NYC in New York City." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1516387938699-a93567ec168e?auto=format&fit=crop&q=80" />
+      </Helmet>
+
       {/* Hero Section */}
       <section
         data-testid="contact-hero-section"
@@ -214,6 +222,16 @@ const Contact = () => {
                   <div>
                     <h3 className="text-lg font-semibold mb-1" style={{ color: '#0F172A' }}>Email</h3>
                     <p className="text-base text-slate-600">notifine2025@gmail.com</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4" data-testid="contact-phone">
+                  <div className="p-3 bg-slate-50 rounded-sm">
+                    <Phone size={24} className="text-slate-900" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold mb-1" style={{ color: '#0F172A' }}>Phone</h3>
+                    <p className="text-base text-slate-600">+1 (646) 966-8748</p>
                   </div>
                 </div>
               </div>

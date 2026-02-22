@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { TrendingUp, Target, Smartphone, Printer, Video } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const Services = () => {
   const services = [
@@ -32,6 +33,13 @@ const Services = () => {
 
   return (
     <div data-testid="services-page" className="pt-20">
+      <Helmet>
+        <title>Services | MBS NYC</title>
+        <meta property="og:title" content="Services | MBS NYC - Comprehensive Business Solutions" />
+        <meta property="og:description" content="From strategy to execution, we provide end-to-end services including Business Development, Marketing, and Custom Printing." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80" />
+      </Helmet>
+
       {/* Hero Section */}
       <section
         data-testid="services-hero-section"

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ExternalLink, Radio } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const Products = () => {
   const products = [
@@ -55,6 +56,13 @@ const Products = () => {
 
   return (
     <div data-testid="products-page" className="pt-20">
+      <Helmet>
+        <title>Products | MBS NYC</title>
+        <meta property="og:title" content="Products | MBS NYC - Our Digital Ecosystem" />
+        <meta property="og:description" content="Discover our suite of innovative digital products like Scan2Find, No2Fine, and ADL Printing." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80" />
+      </Helmet>
+
       {/* Hero Section */}
       <section
         data-testid="products-hero-section"

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Target, Lightbulb, Award, TrendingUp, Zap } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const About = () => {
   const values = [
@@ -32,6 +33,13 @@ const About = () => {
 
   return (
     <div data-testid="about-page" className="pt-20">
+      <Helmet>
+        <title>About Us | MBS NYC</title>
+        <meta property="og:title" content="About Us | MBS NYC - Transforming Vision Into Reality" />
+        <meta property="og:description" content="Based in the heart of New York City, Mekinda Business Solutions LLC is a premier consulting and digital solutions firm." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80" />
+      </Helmet>
+
       {/* Hero Section */}
       <section
         data-testid="about-hero-section"

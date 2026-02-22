@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Target, Users, TrendingUp, Calendar } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const Partners = () => {
   const partners = [
@@ -31,6 +32,13 @@ const Partners = () => {
 
   return (
     <div data-testid="partners-page" className="pt-20">
+      <Helmet>
+        <title>Partners | MBS NYC</title>
+        <meta property="og:title" content="Partners | MBS NYC - Strategic Partnerships" />
+        <meta property="og:description" content="We collaborate with leading organizations to deliver exceptional marketing strategies and operational excellence." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80" />
+      </Helmet>
+
       {/* Hero Section */}
       <section
         data-testid="partners-hero-section"

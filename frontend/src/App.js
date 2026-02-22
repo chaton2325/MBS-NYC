@@ -9,23 +9,26 @@ import Products from '@/pages/Products';
 import Partners from '@/pages/Partners';
 import Contact from '@/pages/Contact';
 import { Toaster } from 'sonner';
+import { HelmetProvider } from 'react-helmet-async';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/partners" element={<Partners />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        <Footer />
-        <Toaster position="top-right" richColors />
-      </BrowserRouter>
+      <HelmetProvider>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/partners" element={<Partners />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+          <Footer />
+          <Toaster position="top-right" richColors />
+        </BrowserRouter>
+      </HelmetProvider>
     </div>
   );
 }

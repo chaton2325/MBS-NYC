@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { TrendingUp, Target, Smartphone, Printer, Video, ArrowRight, CheckCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
   const services = [
@@ -51,6 +52,13 @@ const Home = () => {
 
   return (
     <div data-testid="home-page">
+      <Helmet>
+        <title>Home | MBS NYC</title>
+        <meta property="og:title" content="Home | MBS NYC - Empowering Businesses" />
+        <meta property="og:description" content="Mekinda Business Solutions LLC provides strategic consulting and cutting-edge digital tools to help organizations thrive." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1769034386975-433254829565?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTF8MHwxfHNlYXJjaHwxfHxueWMlMjBza3lsaW5lJTIwY29ycG9yYXRlJTIwc3Vuc2V0JTIwZ2xhc3N8ZW58MHx8fHwxNzcxNzk0OTQ4fDA&ixlib=rb-4.1.0&q=85" />
+      </Helmet>
+
       {/* Hero Section */}
       <section
         data-testid="hero-section"
