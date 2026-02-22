@@ -33,23 +33,37 @@ const Services = () => {
   return (
     <div data-testid="services-page" className="pt-20">
       {/* Hero Section */}
-      <section data-testid="services-hero-section" className="py-24 md:py-32 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+      <section
+        data-testid="services-hero-section"
+        className="relative py-24 md:py-32 overflow-hidden"
+        style={{
+          background: 'linear-gradient(to bottom right, #0F172A, #0A192F, #0F172A)'
+        }}
+      >
+        <div
+          className="absolute inset-0 opacity-40"
+          style={{
+            backgroundImage: `url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80)`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <span className="text-sm uppercase tracking-widest text-slate-500 font-semibold">Our Services</span>
+            <span className="text-sm uppercase tracking-widest text-slate-300 font-semibold">Our Services</span>
             <h1
               data-testid="services-title"
-              className="text-5xl md:text-7xl font-bold tracking-tight leading-none mt-4 mb-6"
-              style={{ fontFamily: 'Playfair Display, serif', color: '#0F172A' }}
+              className="text-5xl md:text-7xl font-bold tracking-tight leading-none mt-4 mb-6 text-white"
+              style={{ fontFamily: 'Playfair Display, serif' }}
             >
               Comprehensive Business Solutions
             </h1>
-            <p data-testid="services-description" className="text-lg md:text-xl leading-relaxed text-slate-600">
+            <p data-testid="services-description" className="text-lg md:text-xl leading-relaxed text-slate-300">
               From strategy to execution, we provide end-to-end services that transform your business vision into measurable outcomes.
             </p>
           </motion.div>

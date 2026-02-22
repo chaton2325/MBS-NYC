@@ -1,11 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone, Send } from 'lucide-react';
-import axios from 'axios';
 import { toast } from 'sonner';
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -24,50 +20,59 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    try {
-      const response = await axios.post(`${API}/contact`, formData);
-      
-      if (response.status === 200) {
-        toast.success('Thank you for contacting us! We will get back to you soon.');
-        setFormData({
-          name: '',
-          email: '',
-          company: '',
-          message: ''
-        });
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      toast.error('Failed to submit form. Please try again.');
-    } finally {
-      setIsSubmitting(false);
-    }
+    const subject = `Contact Request from ${formData.name} - ${formData.company}`;
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\n\nMessage:\n${formData.message}`;
+    
+    window.location.href = `mailto:notifine2025@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    toast.success('Opening your email client...');
+    setFormData({
+      name: '',
+      email: '',
+      company: '',
+      message: ''
+    });
+    setIsSubmitting(false);
   };
 
   return (
     <div data-testid="contact-page" className="pt-20">
       {/* Hero Section */}
-      <section data-testid="contact-hero-section" className="py-24 md:py-32 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+      <section
+        data-testid="contact-hero-section"
+        className="relative py-24 md:py-32 overflow-hidden"
+        style={{
+          background: 'linear-gradient(to bottom right, #0F172A, #0A192F, #0F172A)'
+        }}
+      >
+        <div
+          className="absolute inset-0 opacity-40"
+          style={{
+            backgroundImage: `url(https://images.unsplash.com/photo-1516387938699-a93567ec168e?auto=format&fit=crop&q=80)`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <span className="text-sm uppercase tracking-widest text-slate-500 font-semibold">Get in Touch</span>
+            <span className="text-sm uppercase tracking-widest text-slate-300 font-semibold">Get in Touch</span>
             <h1
               data-testid="contact-title"
-              className="text-5xl md:text-7xl font-bold tracking-tight leading-none mt-4 mb-6"
-              style={{ fontFamily: 'Playfair Display, serif', color: '#0F172A' }}
+              className="text-5xl md:text-7xl font-bold tracking-tight leading-none mt-4 mb-6 text-white"
+              style={{ fontFamily: 'Playfair Display, serif' }}
             >
               Let's Start a Conversation
             </h1>
-            <p data-testid="contact-description" className="text-lg md:text-xl leading-relaxed text-slate-600">
+            <p data-testid="contact-description" className="text-lg md:text-xl leading-relaxed text-slate-300">
               Ready to transform your business? Reach out to MBS NYC and discover how our expertise can help you achieve your goals.
             </p>
           </motion.div>
