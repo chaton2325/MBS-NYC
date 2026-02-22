@@ -5,7 +5,7 @@ const Products = () => {
   const products = [
     {
       icon: <Scan size={48} strokeWidth={1.5} />,
-      name: 'Scan 2 Find App',
+      name: 'Scan2Find App',
       description: 'A revolutionary QR-based discovery platform that connects users with businesses, events, and information seamlessly. Scan 2 Find transforms physical spaces into interactive digital experiences.',
       features: [
         'QR code scanning and generation',
@@ -13,11 +13,11 @@ const Products = () => {
         'Business directory integration',
         'Real-time notifications'
       ],
-      link: '#'
+      link: 'https://scan2find.info'
     },
     {
       icon: <AlertCircle size={48} strokeWidth={1.5} />,
-      name: 'No 2 Fine App',
+      name: 'No2Fine App',
       description: 'An innovative community engagement solution designed to improve civic participation and streamline communication between organizations and their communities.',
       features: [
         'Community notifications',
@@ -25,7 +25,7 @@ const Products = () => {
         'Multi-channel communication',
         'Customizable campaigns'
       ],
-      link: '#'
+      link: 'https://no2fine.app'
     },
     {
       icon: <PrinterIcon size={48} strokeWidth={1.5} />,
@@ -37,7 +37,7 @@ const Products = () => {
         'Branded merchandise',
         'Large format printing'
       ],
-      link: '#'
+      link: 'https://adlprinting.com'
     },
     {
       icon: <Radio size={48} strokeWidth={1.5} />,
