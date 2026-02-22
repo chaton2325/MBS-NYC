@@ -1,0 +1,163 @@
+{
+  "project_name": "MBS NYC - Mekinda Business Solutions",
+  "identity": {
+    "tone": "Premium Corporate, Trustworthy, Innovative, NYC-centric",
+    "archetype": "The Sovereign (Authority & Excellence) mixed with The Creator (Innovation)",
+    "keywords": ["Strategic", "Executive", "Digital", "Elite", "Manhattan"]
+  },
+  "typography": {
+    "font_family": {
+      "heading": "Playfair Display, serif",
+      "body": "Manrope, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "scale": {
+      "h1": "text-5xl md:text-7xl font-bold tracking-tight leading-none",
+      "h2": "text-4xl md:text-5xl font-semibold tracking-tight",
+      "h3": "text-2xl md:text-3xl font-medium",
+      "body_lg": "text-lg md:text-xl leading-relaxed",
+      "body": "text-base leading-relaxed text-slate-600 dark:text-slate-300",
+      "caption": "text-sm uppercase tracking-widest text-slate-500 font-semibold"
+    },
+    "installation": "Import via Google Fonts in index.css: @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');"
+  },
+  "colors": {
+    "theme_mode": "light",
+    "palette": {
+      "primary": {
+        "DEFAULT": "#0F172A",
+        "50": "#F8FAFC",
+        "100": "#F1F5F9",
+        "200": "#E2E8F0",
+        "300": "#CBD5E1",
+        "400": "#94A3B8",
+        "500": "#64748B",
+        "600": "#475569",
+        "700": "#334155",
+        "800": "#1E293B",
+        "900": "#0F172A",
+        "950": "#020617"
+      },
+      "secondary": {
+        "DEFAULT": "#FFFFFF",
+        "foreground": "#0F172A"
+      },
+      "accent": {
+        "DEFAULT": "#3B82F6",
+        "glow": "#60A5FA"
+      },
+      "background": "#FFFFFF",
+      "surface": "#F8FAFC",
+      "surface_highlight": "#F1F5F9"
+    },
+    "gradients": {
+      "hero": "bg-gradient-to-br from-slate-900 via-[#0A192F] to-slate-900",
+      "subtle": "bg-gradient-to-b from-white to-slate-50"
+    }
+  },
+  "layout_strategy": {
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "section_spacing": "py-24 md:py-32",
+    "grid_system": "Bento Grid (Mode A)",
+    "border_radius": "rounded-none md:rounded-sm",
+    "glass_effect": "bg-white/80 backdrop-blur-xl border border-white/20 shadow-lg"
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-slate-900 text-white hover:bg-slate-800 rounded-sm px-8 py-4 text-sm font-semibold tracking-wide transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5",
+      "secondary": "bg-white text-slate-900 border border-slate-200 hover:bg-slate-50 rounded-sm px-8 py-4 text-sm font-semibold tracking-wide transition-all",
+      "outline": "border border-white/30 text-white hover:bg-white/10 rounded-sm px-8 py-4 transition-all"
+    },
+    "cards": {
+      "service": "group relative p-8 bg-white border border-slate-100 hover:border-slate-300 hover:shadow-xl transition-all duration-300 flex flex-col items-start justify-between h-full overflow-hidden",
+      "product": "bg-slate-50 border border-slate-200 p-8 hover:bg-white hover:shadow-lg transition-all"
+    },
+    "inputs": {
+      "default": "h-12 bg-white border-slate-200 focus:ring-slate-900 focus:border-slate-900 rounded-sm"
+    }
+  },
+  "visual_enhancers": {
+    "shadows": {
+      "soft": "shadow-[0_8px_30px_rgb(0,0,0,0.04)]",
+      "glow": "shadow-[0_0_15px_rgba(59,130,246,0.3)]"
+    },
+    "textures": {
+      "noise": "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E\")"
+    }
+  },
+  "assets": {
+    "images": [
+      {
+        "category": "hero_bg",
+        "url": "https://images.unsplash.com/photo-1769034386975-433254829565?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTF8MHwxfHNlYXJjaHwxfHxueWMlMjBza3lsaW5lJTIwY29ycG9yYXRlJTIwc3Vuc2V0JTIwZ2xhc3N8ZW58MHx8fHwxNzcxNzk0OTQ4fDA&ixlib=rb-4.1.0&q=85",
+        "alt": "NYC Empire State Building at Dusk",
+        "usage": "Hero section background with dark overlay"
+      },
+      {
+        "category": "about_meeting",
+        "url": "https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTZ8MHwxfHNlYXJjaHwxfHxkaXZlcnNlJTIwYnVzaW5lc3MlMjBleGVjdXRpdmVzJTIwbWVldGluZyUyMG1vZGVybiUyMG9mZmljZXxlbnwwfHx8fDE3NzE3OTQ5NTF8MA&ixlib=rb-4.1.0&q=85",
+        "alt": "Executives in a modern office",
+        "usage": "About section or Team section"
+      },
+      {
+        "category": "innovation_abstract",
+        "url": "https://images.pexels.com/photos/28428591/pexels-photo-28428591.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "alt": "Abstract Blue Geometric 3D",
+        "usage": "Background for 'Innovative Products' or 'Digital Services'"
+      }
+    ],
+    "icons": {
+      "library": "lucide-react",
+      "style": "Stroke width 1.5px, size 24px or 32px"
+    }
+  },
+  "universal_guidelines": {
+    "general": [
+      "Don't make generic centered layouts.",
+      "Use 2-3x more spacing than feels comfortable (p-12, p-16).",
+      "Every interaction needs micro-animations (hover states, transitions).",
+      "Use 'Playfair Display' for Headings to evoke premium trust.",
+      "Use 'Manrope' for body text for optimal readability.",
+      "Primary CTA buttons should be solid Navy (#0F172A).",
+      "Secondary actions should be outlined or ghost."
+    ],
+    "accessibility": [
+      "Ensure text contrast ratio is at least 4.5:1.",
+      "All interactive elements must have aria-labels if no text is present.",
+      "Use semantic HTML5 tags (section, article, nav, aside)."
+    ],
+    "testing": [
+      "All interactive elements MUST include data-testid attribute (kebab-case)."
+    ]
+  },
+  "pages_structure": {
+    "home": {
+      "sections": ["Hero", "ServicesPreview", "ProductsPreview", "PartnersTicker", "CTA"],
+      "layout": "Asymmetric Bento"
+    },
+    "about": {
+      "sections": ["MissionVision", "ValuesGrid", "NYCStory"],
+      "layout": "Text-heavy with floating images"
+    },
+    "services": {
+      "sections": ["ServiceList"],
+      "layout": "Detailed Cards with Icons"
+    },
+    "products": {
+      "sections": ["ProductShowcase"],
+      "layout": "Z-Pattern or Alternating Grid"
+    },
+    "contact": {
+      "sections": ["ContactForm", "Map"],
+      "layout": "Split Screen (Form Left, Info/Map Right)"
+    }
+  },
+  "instructions_to_main_agent": [
+    "Install 'clsx' and 'tailwind-merge' for class handling if not present.",
+    "Install 'framer-motion' for animations.",
+    "Use 'lucide-react' for all icons.",
+    "Ensure the Navbar is sticky with a glassmorphism effect.",
+    "Footer should be deep navy (bg-slate-900) with white text.",
+    "Use the provided image URLs strictly. Do not use placeholders."
+  ]
+}
