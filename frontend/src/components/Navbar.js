@@ -8,6 +8,9 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
+  const isHome = location.pathname === '/';
+  const isTransparent = isHome && !isScrolled;
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -29,9 +32,9 @@ const Navbar = () => {
     <nav
       data-testid="main-navbar"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white/80 backdrop-blur-xl border-b border-slate-200 shadow-lg'
-          : 'bg-transparent'
+        isTransparent
+          ? 'bg-transparent'
+          : 'bg-white/80 backdrop-blur-xl border-b border-slate-200 shadow-lg'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -43,10 +46,10 @@ const Navbar = () => {
               whileHover={{ scale: 1.02 }}
               className="flex flex-col"
             >
-              <span className="text-2xl font-bold tracking-tight" style={{ fontFamily: 'Playfair Display, serif', color: '#0F172A' }}>
+              <span className={`text-2xl font-bold tracking-tight transition-colors ${isTransparent ? 'text-white' : 'text-slate-900'}`} style={{ fontFamily: 'Playfair Display, serif' }}>
                 MBS NYC
               </span>
-              <span className="text-xs tracking-widest text-slate-500 font-semibold">
+              <span className={`text-xs tracking-widest font-semibold transition-colors ${isTransparent ? 'text-slate-300' : 'text-slate-500'}`}>
                 MEKINDA BUSINESS SOLUTIONS
               </span>
             </motion.div>
@@ -60,9 +63,9 @@ const Navbar = () => {
                 to={link.path}
                 data-testid={`nav-link-${link.name.toLowerCase()}`}
                 className={`text-sm font-semibold tracking-wide transition-colors ${
-                  location.pathname === link.path
-                    ? 'text-slate-900'
-                    : 'text-slate-600 hover:text-slate-900'
+                  isTransparent
+                    ? (location.pathname === link.path ? 'text-white' : 'text-slate-300 hover:text-white')
+                    : (location.pathname === link.path ? 'text-slate-900' : 'text-slate-600 hover:text-slate-900')
                 }`}
               >
                 {link.name}
@@ -72,7 +75,9 @@ const Navbar = () => {
               <motion.button
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-slate-900 text-white hover:bg-slate-800 rounded-sm px-6 py-3 text-sm font-semibold tracking-wide transition-all shadow-lg hover:shadow-xl"
+                className={`rounded-sm px-6 py-3 text-sm font-semibold tracking-wide transition-all shadow-lg hover:shadow-xl ${
+                  isTransparent ? 'bg-white text-slate-900 hover:bg-slate-100' : 'bg-slate-900 text-white hover:bg-slate-800'
+                }`}
               >
                 Get Started
               </motion.button>
@@ -83,7 +88,7 @@ const Navbar = () => {
           <button
             data-testid="mobile-menu-toggle"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-slate-900"
+            className={`md:hidden p-2 ${isTransparent ? 'text-white' : 'text-slate-900'}`}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
