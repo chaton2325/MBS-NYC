@@ -41,7 +41,7 @@ const Home = () => {
     {
       name: 'UNews23 Media',
       description: 'Next-generation media and news platform',
-      link: '#'
+      link: 'https://www.facebook.com/share/1AsrnQFEkh/'
     }
   ];
 

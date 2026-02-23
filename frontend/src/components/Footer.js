@@ -21,7 +21,7 @@ const Footer = () => {
             </div>
             <div className="flex items-start space-x-2 text-slate-400 mb-2">
               <Mail size={18} className="mt-1 flex-shrink-0" />
-              <span className="text-sm">notifine2025@gmail.com</span>
+              <span className="text-sm">mekinda@mbsnyc.com</span>
             </div>
           </div>
 

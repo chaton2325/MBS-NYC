@@ -28,7 +28,7 @@ const Contact = () => {
     const subject = `Contact Request from ${formData.name} - ${formData.company}`;
     const body = `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\n\nMessage:\n${formData.message}`;
     
-    window.location.href = `mailto:notifine2025@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:mekinda@mbsnyc.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
     toast.success('Opening your email client...');
     setFormData({
@@ -221,7 +221,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1" style={{ color: '#0F172A' }}>Email</h3>
-                    <p className="text-base text-slate-600">notifine2025@gmail.com</p>
+                    <p className="text-base text-slate-600">mekinda@mbsnyc.com</p>
                   </div>
                 </div>
 

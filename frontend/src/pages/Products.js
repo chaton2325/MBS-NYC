@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet-async';
 const Products = () => {
   const products = [
     {
-      icon: <img src="/scan2find.jpg" alt="Scan2Find App" className="h-56 w-auto object-contain rounded-lg shadow-sm" />,
+      icon: <img src="/scan2find2.jpeg" alt="Scan2Find App" className="h-90 w-auto object-contain rounded-lg shadow-sm" />,
       name: 'Scan2Find App',
       description: 'A revolutionary QR-based discovery platform that connects users with businesses, events, and information seamlessly. Scan 2 Find transforms physical spaces into interactive digital experiences.',
       features: [
@@ -29,7 +29,7 @@ const Products = () => {
       link: 'https://no2fine.app'
     },
     {
-      icon: <img src="/ADL-removebg.png" alt="ADL Printing" className="h-48 w-auto object-contain" />,
+      icon: <img src="/ADL-removebg.png" alt="ADL Printing" className="h-90 w-auto object-contain" />,
       name: 'ADL Printing',
       description: 'Professional custom printing services offering high-quality production for all your business needs, from marketing materials to branded merchandise.',
       features: [
@@ -41,7 +41,7 @@ const Products = () => {
       link: 'https://adlprinting.com'
     },
     {
-      icon: <Radio size={48} strokeWidth={1.5} />,
+      icon: <img src="/unews.jpeg" alt="UNews23 Media" className="h-90 w-auto object-contain" />,
       name: 'UNews23 Media',
       description: 'A next-generation media and news platform delivering timely, relevant content to diverse audiences. UNews23 combines traditional journalism with digital innovation.',
       features: [
@@ -50,7 +50,7 @@ const Products = () => {
         'Community reporting',
         'Interactive storytelling'
       ],
-      link: '#'
+      link: 'https://www.facebook.com/share/1AsrnQFEkh/'
     }
   ];
 
