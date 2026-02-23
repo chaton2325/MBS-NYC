@@ -47,10 +47,10 @@ const Navbar = () => {
               className="flex flex-col"
             >
               <span className={`text-2xl font-bold tracking-tight transition-colors ${isTransparent ? 'text-white' : 'text-slate-900'}`} style={{ fontFamily: 'Playfair Display, serif' }}>
-                MBS NYC
+                MBS NYC LLC
               </span>
               <span className={`text-xs tracking-widest font-semibold transition-colors ${isTransparent ? 'text-slate-300' : 'text-slate-500'}`}>
-                MEKINDA BUSINESS SOLUTIONS
+                MEKINDA BUSINESS SOLUTIONS LLC
               </span>
             </motion.div>
           </Link>
